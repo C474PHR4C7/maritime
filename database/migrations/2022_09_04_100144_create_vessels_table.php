@@ -14,7 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('vessels', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('name');
+            $table->string('IMO_number')->unique();
             $table->timestamps();
         });
     }
