@@ -16,6 +16,7 @@ class VoyageController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+
     {
         return new VoyageCollection(Voyage::paginate());
     }
@@ -28,6 +29,7 @@ class VoyageController extends Controller
     public function create()
     {
         //
+
     }
 
     /**
@@ -38,7 +40,8 @@ class VoyageController extends Controller
      */
     public function store(StoreVoyageRequest $request)
     {
-        //
+        $voyage=Voyage::create($request->all());
+        return $voyage;
     }
 
     /**

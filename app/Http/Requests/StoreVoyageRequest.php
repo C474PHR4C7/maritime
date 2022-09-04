@@ -24,7 +24,8 @@ class StoreVoyageRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            //''=>'required' Εδώ θα μπεί το πλοίο ως required απο τις απαιτήσεις που δόθηκαν.
+            'voy_start'=>'required'
         ];
     }
 }

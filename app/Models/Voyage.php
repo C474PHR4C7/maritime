@@ -10,6 +10,6 @@ class Voyage extends Model
     use HasFactory;
 
     public function vessel(){
-        return $this->belongsTo(Vessel::class);
+        return $this->belongsTo(Vessel::class); //One ship has many voyages
     }
 }
