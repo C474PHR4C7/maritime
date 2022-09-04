@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreVessel_opexRequest;
 use App\Http\Requests\UpdateVessel_opexRequest;
 use App\Models\Vessel_opex;
