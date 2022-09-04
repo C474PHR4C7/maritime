@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
-use App\Models\Vessel_opex;
-use App\Http\Requests\StoreVessel_opexRequest;
-use App\Http\Requests\UpdateVessel_opexRequest;
+use App\Http\Requests\StoreVoyageRequest;
+use App\Http\Requests\UpdateVoyageRequest;
+use App\Models\Voyage;
 
-class VesselOpexController extends Controller
+class VoyageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class VesselOpexController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreVessel_opexRequest  $request
+     * @param  \App\Http\Requests\StoreVoyageRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreVessel_opexRequest $request)
+    public function store(StoreVoyageRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class VesselOpexController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Vessel_opex  $vessel_opex
+     * @param  \App\Models\Voyage  $voyage
      * @return \Illuminate\Http\Response
      */
-    public function show(Vessel_opex $vessel_opex)
+    public function show(Voyage $voyage)
     {
         //
     }
@@ -53,10 +53,10 @@ class VesselOpexController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Vessel_opex  $vessel_opex
+     * @param  \App\Models\Voyage  $voyage
      * @return \Illuminate\Http\Response
      */
-    public function edit(Vessel_opex $vessel_opex)
+    public function edit(Voyage $voyage)
     {
         //
     }
@@ -64,11 +64,11 @@ class VesselOpexController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateVessel_opexRequest  $request
-     * @param  \App\Models\Vessel_opex  $vessel_opex
+     * @param  \App\Http\Requests\UpdateVoyageRequest  $request
+     * @param  \App\Models\Voyage  $voyage
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateVessel_opexRequest $request, Vessel_opex $vessel_opex)
+    public function update(UpdateVoyageRequest $request, Voyage $voyage)
     {
         //
     }
@@ -76,10 +76,10 @@ class VesselOpexController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Vessel_opex  $vessel_opex
+     * @param  \App\Models\Voyage  $voyage
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Vessel_opex $vessel_opex)
+    public function destroy(Voyage $voyage)
     {
         //
     }
