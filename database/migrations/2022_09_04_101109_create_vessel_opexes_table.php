@@ -14,7 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('vessel_opexes', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->integer('vessel_id')->unsigned();
+            $table->foreign('vessel_id')->references('id')->on('vessels');
+            $table->dateTime('opex_date');
+            $table->decimal('expenses',8,2);
             $table->timestamps();
         });
     }
