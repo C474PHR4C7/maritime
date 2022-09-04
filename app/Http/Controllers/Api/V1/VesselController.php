@@ -16,7 +16,7 @@ class VesselController extends Controller
      */
     public function index()
     {
-        //
+        return Vessel::all();
     }
 
     /**

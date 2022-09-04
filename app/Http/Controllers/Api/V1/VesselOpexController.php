@@ -16,7 +16,7 @@ class VesselOpexController extends Controller
      */
     public function index()
     {
-        //
+        return Vessel_opex::all();
     }
 
     /**

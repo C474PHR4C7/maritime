@@ -16,7 +16,7 @@ class VoyageController extends Controller
      */
     public function index()
     {
-        //
+        return Voyage::all();
     }
 
     /**
