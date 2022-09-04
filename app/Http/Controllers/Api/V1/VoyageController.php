@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\V1;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreVoyageRequest;
 use App\Http\Requests\UpdateVoyageRequest;
+use App\Http\Resources\V1\VoyageCollection;
 use App\Models\Voyage;
 
 class VoyageController extends Controller
@@ -16,7 +17,7 @@ class VoyageController extends Controller
      */
     public function index()
     {
-        return Voyage::all();
+        return new VoyageCollection(Voyage::paginate());
     }
 
     /**
@@ -48,7 +49,7 @@ class VoyageController extends Controller
      */
     public function show(Voyage $voyage)
     {
-        //
+        return new VoyageResource($voyage);
     }
 
     /**

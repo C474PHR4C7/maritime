@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreVesselRequest;
 use App\Http\Requests\UpdateVesselRequest;
 use App\Models\Vessel;
+use App\Http\Resources\V1\VesselResource;
+use App\Http\Resources\V1\VesselCollection;
 
 class VesselController extends Controller
 {
@@ -16,7 +18,7 @@ class VesselController extends Controller
      */
     public function index()
     {
-        return Vessel::all();
+        return new VesselCollection(Vessel::paginate());
     }
 
     /**
@@ -48,7 +50,7 @@ class VesselController extends Controller
      */
     public function show(Vessel $vessel)
     {
-        //
+        return new VesselResource($vessel);
     }
 
     /**

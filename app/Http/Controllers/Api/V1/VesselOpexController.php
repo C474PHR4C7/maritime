@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\V1;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreVessel_opexRequest;
 use App\Http\Requests\UpdateVessel_opexRequest;
+use App\Http\Resources\V1\Vessel_OpexCollection;
 use App\Models\Vessel_opex;
 
 class VesselOpexController extends Controller
@@ -16,7 +17,7 @@ class VesselOpexController extends Controller
      */
     public function index()
     {
-        return Vessel_opex::all();
+        return new Vessel_OpexCollection(Vessel_opex::paginate());
     }
 
     /**
@@ -48,7 +49,7 @@ class VesselOpexController extends Controller
      */
     public function show(Vessel_opex $vessel_opex)
     {
-        //
+        return new Vessel_opexResource($vessel_opex);
     }
 
     /**
